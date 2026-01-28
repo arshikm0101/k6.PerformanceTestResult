@@ -1,0 +1,50 @@
+C:\Users\arshi\Downloads\k6.HRM>k6 run --out json=results.json k6Hrm.js
+
+         /\      Grafana   /‾‾/
+    /\  /  \     |\  __   /  /
+   /  \/    \    | |/ /  /   ‾‾\
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/
+
+     execution: local
+        script: k6Hrm.js
+        output: json (results.json)
+
+     scenarios: (100.00%) 1 scenario, 10 max VUs, 1m0s max duration (incl. graceful stop):
+              * default: 10 looping VUs for 30s (gracefulStop: 30s)
+
+
+
+  █ TOTAL RESULTS
+
+    checks_total.......: 224    6.873661/s
+    checks_succeeded...: 50.00% 112 out of 224
+    checks_failed......: 50.00% 112 out of 224
+
+    ✓ status is 200
+    ✗ login successful
+      ↳  0% — ✓ 0 / ✗ 112
+
+    HTTP
+    http_req_duration..............: avg=863.92ms min=584.2ms med=836.61ms max=1.5s  p(90)=1.11s p(95)=1.21s
+      { expected_response:true }...: avg=863.92ms min=584.2ms med=836.61ms max=1.5s  p(90)=1.11s p(95)=1.21s
+    http_req_failed................: 0.00%  0 out of 224
+    http_reqs......................: 224    6.873661/s
+
+    EXECUTION
+    iteration_duration.............: avg=2.85s    min=2.27s   med=2.76s    max=4.36s p(90)=3.32s p(95)=4.24s
+    iterations.....................: 112    3.436831/s
+    vus............................: 7      min=7        max=10
+    vus_max........................: 10     min=10       max=10
+
+    NETWORK
+    data_received..................: 601 kB 18 kB/s
+    data_sent......................: 78 kB  2.4 kB/s
+
+
+
+
+running (0m32.6s), 00/10 VUs, 112 complete and 0 interrupted iterations
+default ✓ [======================================] 10 VUs  30s
+
+C:\Users\arshi\Downloads\k6.HRM>
