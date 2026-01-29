@@ -1,3 +1,5 @@
+HTML Report : https://prnt.sc/g6OHLk8rQfpb , https://prnt.sc/jK0j6EC8LXVH , 
+
 C:\Users\arshi\Downloads\k6.HRM>k6 run --out json=results.json k6Hrm.js
 
          /\      Grafana   /‾‾/
